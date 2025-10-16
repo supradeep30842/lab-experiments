@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bakery Promo - Experiment 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="exp4-style.css">
+</head>
+<body>
+    <header>
+        <h1>Prabhakar’s Bakery</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Featured Products</h2>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2020/8/UF/OY/WJ/2410371/bakery-products.png" alt="Product 1">
+            </div>
+            <div class="slide fade">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSge4giadRAr6qxylJmeHxexrre0pWA0a6g1FL5Jc8TW5ZpgCil8kO3p4d15qFTnm8XRog&usqp=CAU" alt="Product 2">
+            </div>
+            <div class="slide fade">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNhLqdfixuEbfsy-zvQsm253vwuzfIh74KYmSjZ2BXn-StiBpd8qgeLWXrxlWbOK_MoYk&usqp=CAU" alt="Product 3">
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Prabhakar’s Bakery. All rights reserved.</p>
+    </footer>
+    <script>
+        // Simple JS for slideshow animation
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                dots[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].classList.add("active");
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>

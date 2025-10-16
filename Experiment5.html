@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment 5 - Registration Form Validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="exp5-style.css">
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form id="regForm" novalidate>
+        <label>Full Name:
+            <input type="text" id="name" required>
+            <span class="error" id="nameError"></span>
+        </label>
+        <label>Email:
+            <input type="email" id="email" required>
+            <span class="error" id="emailError"></span>
+        </label>
+        <label>Password:
+            <input type="password" id="password" required>
+            <span class="error" id="passError"></span>
+        </label>
+        <label>Phone Number:
+            <input type="tel" id="phone" required pattern="[0-9]{10}">
+            <span class="error" id="phoneError"></span>
+        </label>
+        <button type="submit">Register</button>
+        <div id="success" class="success"></div>
+    </form>
+    <script src="exp5-script.js"></script>
+</body>
+</html>

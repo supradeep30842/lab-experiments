@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #dff6ff;
+    padding: 30px;
+    text-align: center;
+}
+form {
+    margin-bottom: 20px;
+}
+input, button {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #9ddbe3;
+}
+button {
+    background: #38b6ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+#weatherResult {
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+.error {
+    color: #e84118;
+}
+.success {
+    color: #009432;
+}
